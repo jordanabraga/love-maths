@@ -52,7 +52,7 @@ button {
 }
 
 #start-button,
-#restart {
+#restart, #learn-more {
     font-size: 2em;
     font-weight: 600;
     color: #6A179A;
@@ -71,9 +71,18 @@ button {
 .description {
     color: #6A179A;
     font-weight: 100;
+    font-style: italic;
     margin-bottom: 0.9em;
     font-family: 'Anton', sans-serif;
     letter-spacing: 0.15em;
+}
+
+mark {
+    background: linear-gradient(to right, rgb(237, 34, 36, 0.3), rgb(243, 91, 34, 0.3), rgb(249, 150, 33), rgb(245, 193, 30), rgb(241, 235, 27) 27%, rgb(241, 235, 27), rgb(241, 235, 27) 33%, rgb(99, 199, 32), rgb(12, 155, 73), rgb(33, 135, 141), rgb(57, 84, 165, 0.3), rgb(97, 55, 155, 0.3), rgb(147, 40, 142, 0.3));
+    color: #1E0658;
+    padding: 5px;
+    font-weight: 100;
+    font-style: italic;
 }
 
 #restart {
@@ -106,9 +115,11 @@ button {
 
 /* js part */
 
-.questions {
-    margin-bottom: 1.25em;
+.question {
+    margin-bottom: 1em;
     font-weight: 600;
+    font-size: 2em;
+    color: #6A179A;
 }
 
 .option-div {
@@ -147,6 +158,15 @@ button {
 }
 
 #user-score {
-    font-size: 1.5em;
+    font-size: 4em;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 2px 2px rgba(86, 2, 181, 1);
+    font-style: italic;
     color: #fff;
+    margin-bottom: 0.6em;
+}
+
+#learn-more {
+    color: #1E0658;
+    background: linear-gradient(to right, rgb(237, 34, 36, 0.3), rgb(243, 91, 34, 0.3), rgb(249, 150, 33), rgb(245, 193, 30), rgb(241, 235, 27) 27%, rgb(241, 235, 27), rgb(241, 235, 27) 33%, rgb(99, 199, 32), rgb(12, 155, 73), rgb(33, 135, 141), rgb(57, 84, 165, 0.3), rgb(97, 55, 155, 0.3), rgb(147, 40, 142, 0.3));
 }

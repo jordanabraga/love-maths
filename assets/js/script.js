@@ -86,7 +86,7 @@ nextBtn.addEventListener("click",
         if (questionCount == quizArray.length) {
             displayContainer.classList.add("hide");
             scoreContainer.classList.remove("hide");
-            userScore.innerHTML = "Your score is " + scoreCount + " out of " + questionCount;
+            userScore.innerHTML = "Your score is " + scoreCount + " out of " + questionCount + "!";
 
         } else {
             quizDisplay(questionCount);
@@ -203,5 +203,4 @@ window.onload = () => {
     startScreen.classList.remove("hide");
     displayContainer.classList.add("hide");
 };
-
 
