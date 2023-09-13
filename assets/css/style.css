@@ -2,12 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     height: 100vh;
-    background: #FF83CB;
+    background: linear-gradient(90deg, rgba(141, 93, 193, 1) 0%, rgba(255, 131, 203, 1) 33%, rgba(248, 217, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
 }
 
 .header {
@@ -42,6 +42,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 button {
@@ -52,10 +53,20 @@ button {
 
 #start-button,
 #restart {
-    font-size: 1.33em;
+    font-size: 2em;
+    font-weight: 600;
+    color: #6A179A;
     padding: 0.5em 1.8em;
     border-radius: 0.2em;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 13px 35px -7px rgba(86, 2, 181, 1);
+}
+
+.description {
+    color:#6A179A;
+    font-weight: 100;
+    margin-bottom: 0.9em;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.15em;
 }
 
 #restart {
@@ -63,13 +74,15 @@ button {
 }
 
 .timer-div {
-    background-color: yellow;
-    width: 7.5em;
+    background-color: #6A179A;
+    font-size: 2em;
+    color:#fff;
+    width: 4.5em;
     border-radius: 1.8em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.7em 1.8em;
+    padding: 0.5em 1.5em;
 
 }
 
@@ -92,7 +105,8 @@ button {
 }
 
 .option-div {
-    font-size: 0.9em;
+    font-size: 1.4em;
+    letter-spacing: 0.15em;
     width: 100%;
     padding: 1em;
     margin: 0.3em 0;
@@ -114,15 +128,15 @@ button {
 }
 
 .incorrect {
-    background-color: white;
-    color: red;
-    border-color: red;
+    background-color: #E56AAF;
+    color: #A01D5F;
+    border-color: #A01D5F;
 }
 
 .correct {
-    background-color: yellow;
-    color: green;
-    border-color: green;
+    background-color: #41DC89;
+    color: #0FB8A6;
+    border-color: #0FB8A6;
 }
 
 #user-score {
