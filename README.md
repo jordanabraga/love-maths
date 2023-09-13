@@ -2,6 +2,8 @@
 
 The LGBT Quiz challenges your knowledge of queer indentities. When most people look at longer versions of the LGBT acronym, such as LGBTQIA+, they they don't what all this letters mean. The quiz is a fun way to bring awareness as the user plays against time to identify the correct term. At the end, the user is directed to a resource where they can learn more.
 
+![Mockup image](docs/mockup-image.jpg)
+
 [Live Website](https://jordanabraga.github.io/lgbtqia-quiz/)
 
 ## Features
@@ -51,13 +53,37 @@ The design is minimalist, fresh and gay. Details such as the colors of the LGBT 
 ## Validator Testing
 
 - ##### HTML
-  - No errors were returned when passing through the official W3C validator.
+  - The Nu HTML Checker (W3C) is used to validate HTML documents. The files passed without any errors.
+
+<details>
+<summary>HTML Validation</summary>
+<br>
+
+![HTML Validation](docs/html-validation.jpg)
+
+</details>
 
 - ##### CSS
-  - No errors were returned when passing through the official Jigsaw validator.
+  - The W3C Jigsaw CSS Validation Service is used to validate CSS documents. The file passed without any errors.
+
+<details>
+<summary>CSS Validation</summary>
+<br>
+
+![CSS Validation](docs/css-validation.jpg)
+
+</details>
 
 - ##### JavaScript
-  - No errors were returned when passing through the official Jigsaw validator.
+  - The JSHint is used to validate JavaScript documents. The files passed without any errors.
+
+<details>
+<summary>JS Validation</summary>
+<br>
+
+![JS Validation](docs/js-validation.jpg)
+
+</details>
 
 ## Deployment
 

@@ -174,8 +174,7 @@ mark {
 
 /* Media Queries */
 
-@media screen and (min-device-width: 768px)
-    and (max-device-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
 .description {
         width: 80%;
@@ -183,7 +182,7 @@ mark {
 }
 }
  
-@media screen and (max-device-width: 768px) {
+@media screen and (max-width: 768px) {
    
 .description {
         width: 80%;
@@ -203,7 +202,7 @@ mark {
     padding-right: 0.3em;
 }
 
-@media screen and (max-device-width: 440px) {
+@media screen and (max-width: 440px) {
 .timer-div {
     font-size: 1.5em;
     width: 3.5em;
@@ -215,23 +214,20 @@ mark {
     }
 }
  
-@media screen and (max-device-width: 260px) {
-    .start-screen,
-#start-button,
-#restart {
+@media screen and (max-width: 260px) {
+    .start-screen, #start-button, #restart {
     padding: 0.5em 1em;
-}
+    }
 
-#learn-more {
-    padding: 0.5em;
-    font-size: 1em;
-}
-.timer-div {
-    font-size: 0.7em;
-    width: 2.3em;
-}
-.option-div {
-    font-size: 1em;
-}
-}
- 
+    #learn-more {
+        padding: 0.5em;
+        font-size: 1em;
+    }
+    .timer-div {
+        font-size: 0.7em;
+        width: 2.3em;
+    }
+    .option-div {
+        font-size: 1em;
+    }
+}}
