@@ -69,3 +69,40 @@ const quizArray = [
         correctAnswer: "Assexual",
     }
 ];
+
+// Event listeners
+
+restart.addEventListener("click", () => {
+    initial();
+    displayContainer.classList.remove("hide");
+    scoreContainer.classList.add("hide");
+});
+
+nextBtn.addEventListener("click",
+    (displayNext = () => {
+        questionCount += 1;
+
+        if (questionCount == quizArray.length) {
+            displayContainer.classList.add("hide");
+            scoreContainer.classList.remove("hide");
+            userScore.innerHTML = "Your score is " + scoreCount + " out of " + questionCount;
+            numberProgress.innerHTML = "questionCount";
+        } else {
+            quizDisplay(questionCount);
+            count = 7;
+            clearInterval(countdown);
+            timerDisplay();
+        }
+    })
+);
+
+startButton.addEventListener("click", () => {
+    startScreen.classList.add("hide");
+    displayContainer.classList.remove("hide");
+    initial();
+});
+
+window.onload = () => {
+    startScreen.classList.remove("hide");
+    displayContainer.classList.add("hide");
+};
