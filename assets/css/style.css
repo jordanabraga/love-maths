@@ -188,9 +188,19 @@ mark {
 .description {
         width: 80%;
         max-width: 500px;
-
-
 }
+ mark {
+    font-weight: 400;
+ }
+
+  .timer-div {
+    font-size: 2em;
+    width: 3.5em;
+}
+#user-score {
+    font-size: 3em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
 }
 
 @media screen and (max-device-width: 440px) {
@@ -198,6 +208,11 @@ mark {
     font-size: 1.5em;
     width: 3.5em;
 }
+#user-score {
+    font-size: 2.5em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    }
 }
  
 @media screen and (max-device-width: 260px) {
@@ -212,8 +227,8 @@ mark {
     font-size: 1em;
 }
 .timer-div {
-    font-size: 0.8em;
-    width: 2.5em;
+    font-size: 0.7em;
+    width: 2.3em;
 }
 .option-div {
     font-size: 1em;
