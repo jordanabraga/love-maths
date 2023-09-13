@@ -85,7 +85,7 @@ nextBtn.addEventListener("click",
             displayContainer.classList.add("hide");
             scoreContainer.classList.remove("hide");
             userScore.innerHTML = "Your score is " + scoreCount + " out of " + questionCount;
-            numberProgress.innerHTML = "questionCount";
+
         } else {
             quizDisplay(questionCount);
             count = 11;
@@ -158,7 +158,7 @@ function checker(userOption) {
         });
     }
 
-    classInterval(countdown);
+    setInterval(countdown);
     options.forEach((element) => {
         element.disabled = true;
     });
@@ -186,4 +186,3 @@ window.onload = () => {
     displayContainer.classList.add("hide");
 };
 
-console.log("hello")
