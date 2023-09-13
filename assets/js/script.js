@@ -5,6 +5,7 @@ let nextBtn = document.getElementById("next-button");
 let displayContainer = document.getElementById("quiz-container");
 let restart = document.getElementById("restart");
 let userScore = document.getElementById("user-score");
+let startButton = document.getElementById("start-button");
 
 let scoreContainer = document.querySelector(".score-container");
 let startScreen = document.querySelector(".start-screen");
@@ -70,8 +71,6 @@ const quizArray = [
     }
 ];
 
-// Event listeners
-
 restart.addEventListener("click", () => {
     initial();
     displayContainer.classList.remove("hide");
@@ -89,12 +88,92 @@ nextBtn.addEventListener("click",
             numberProgress.innerHTML = "questionCount";
         } else {
             quizDisplay(questionCount);
-            count = 7;
+            count = 11;
             clearInterval(countdown);
             timerDisplay();
         }
     })
 );
+
+const timerDisplay = () => {
+    countdown = setInterval(() => {
+        count--;
+        timeLeft.innerHTML = `${count}s`;
+        if (count == 0) {
+            clearInterval(countdown);
+            displayNext();
+        }
+    }, 1000);
+};
+
+const quizDisplay = (questionCount) => {
+    let quizCards = document.querySelectorAll(".container-mid");
+
+    quizCards.forEach((card) => {
+        card.classList.add("hide");
+    });
+    quizCards[questionCount].classList.remove("hide");
+};
+
+function quizCreater() {
+
+
+    for (let i of quizArray) {
+        let div = document.createElement("div");
+        div.classList.add("container-mid", "hide");
+        let question_DIV = document.createElement("p");
+        question_DIV.classList.add("question");
+        question_DIV.innerHTML = i.question;
+        div.appendChild(question_DIV);
+
+        div.innerHTML += `
+<button class="option-div" onclick="checker(this)">${i.options[0]}</button>
+<button class="option-div" onclick="checker(this)">${i.options[1]}</button>
+<button class="option-div" onclick="checker(this)">${i.options[2]}</button>
+<button class="option-div" onclick="checker(this)">${i.options[3]}</button>
+
+`;
+
+        quizContainer.appendChild(div);
+    }
+}
+
+function checker(userOption) {
+    let userSolution = userOption.innerText;
+    let question = document.getElementsByClassName("container-mid")[questionCount];
+    let options = question.querySelectorAll(".option-div");
+
+    if (userSolution === quizArray[questionCount].correctAnswer) {
+        userOption.classList.add("correct");
+        scoreCount++;
+        setTimeout(displayNext, 1000);
+    } else {
+        userOption.classList.add("incorrect");
+        setTimeout(displayNext, 1000);
+
+        options.forEach((element) => {
+            if (element.innerText == quizArray[questionCount].correctAnswer) {
+                element.classList.add("correct");
+            }
+        });
+    }
+
+    classInterval(countdown);
+    options.forEach((element) => {
+        element.disabled = true;
+    });
+}
+
+function initial() {
+    quizContainer.innerHTML = "";
+    questionCount = 0;
+    scoreCount = 0;
+    count = 7;
+    clearInterval(countdown);
+    timerDisplay();
+    quizCreater();
+    quizDisplay(questionCount);
+}
 
 startButton.addEventListener("click", () => {
     startScreen.classList.add("hide");
@@ -106,3 +185,5 @@ window.onload = () => {
     startScreen.classList.remove("hide");
     displayContainer.classList.add("hide");
 };
+
+console.log("hello")
