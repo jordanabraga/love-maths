@@ -170,3 +170,53 @@ mark {
     color: #1E0658;
     background: linear-gradient(to right, rgb(237, 34, 36, 0.3), rgb(243, 91, 34, 0.3), rgb(249, 150, 33), rgb(245, 193, 30), rgb(241, 235, 27) 27%, rgb(241, 235, 27), rgb(241, 235, 27) 33%, rgb(99, 199, 32), rgb(12, 155, 73), rgb(33, 135, 141), rgb(57, 84, 165, 0.3), rgb(97, 55, 155, 0.3), rgb(147, 40, 142, 0.3));
 }
+
+
+/* Media Queries */
+
+@media screen and (min-device-width: 768px)
+    and (max-device-width: 1024px) {
+
+.description {
+        width: 80%;
+        max-width: 500px;
+}
+}
+ 
+@media screen and (max-device-width: 768px) {
+   
+.description {
+        width: 80%;
+        max-width: 500px;
+
+
+}
+}
+
+@media screen and (max-device-width: 440px) {
+.timer-div {
+    font-size: 1.5em;
+    width: 3.5em;
+}
+}
+ 
+@media screen and (max-device-width: 260px) {
+    .start-screen,
+#start-button,
+#restart {
+    padding: 0.5em 1em;
+}
+
+#learn-more {
+    padding: 0.5em;
+    font-size: 1em;
+}
+.timer-div {
+    font-size: 0.8em;
+    width: 2.5em;
+}
+.option-div {
+    font-size: 1em;
+}
+}
+ 
