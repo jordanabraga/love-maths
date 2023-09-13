@@ -7,6 +7,7 @@ let restart = document.getElementById("restart");
 let userScore = document.getElementById("user-score");
 let startButton = document.getElementById("start-button");
 
+
 let scoreContainer = document.querySelector(".score-container");
 let startScreen = document.querySelector(".start-screen");
 let timeLeft = document.querySelector(".time-left");
@@ -17,6 +18,7 @@ let questionCount;
 let scoreCount = 0;
 let count = 7;
 let countdown;
+
 
 // array with quiz questions
 
@@ -175,6 +177,22 @@ function initial() {
     quizDisplay(questionCount);
 }
 
+// LGBT Font Colors
+
+const lgbtColors = ['#FF0018', '#FFA52C', '#FFD800', '#008026', '#0000FF', '#A3026D'];
+
+const textElement = document.getElementById('pride-colors');
+let colorIndex = 0;
+
+function changeFontColor() {
+    textElement.style.color = lgbtColors[colorIndex];
+    colorIndex = (colorIndex + 1) % lgbtColors.length;
+}
+
+setInterval(changeFontColor, 1000);
+
+// Start button event listerner and load
+
 startButton.addEventListener("click", () => {
     startScreen.classList.add("hide");
     displayContainer.classList.remove("hide");
@@ -185,4 +203,5 @@ window.onload = () => {
     startScreen.classList.remove("hide");
     displayContainer.classList.add("hide");
 };
+
 
