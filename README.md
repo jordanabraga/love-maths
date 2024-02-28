@@ -1,4 +1,4 @@
-# LGBT Quiz - What does the letters mean?
+# LGBT Quiz - What do the letters mean?
 
 The LGBT Quiz challenges your knowledge of queer indentities. When most people look at longer versions of the LGBT acronym, such as LGBTQIA+, they they don't what all this letters mean. The quiz is a fun way to bring awareness as the user plays against time to identify the correct term. At the end, the user is directed to a resource where they can learn more.
 
